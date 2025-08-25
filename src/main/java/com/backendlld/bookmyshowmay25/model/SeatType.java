@@ -4,11 +4,9 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.awt.print.Book;
-
 @Getter
 @Setter
 @Entity
-public class Region extends BaseModel {
+public class SeatType extends BaseModel {
     private String name;
 }

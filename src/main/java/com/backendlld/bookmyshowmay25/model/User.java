@@ -1,22 +1,20 @@
 package com.backendlld.bookmyshowmay25.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.awt.print.Book;
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
 @Entity
-public class Theatre extends BaseModel {
-    private String name;
-    private String address;
+public class User extends BaseModel{
+    private String username;
+    private String email;
     @OneToMany
-    private List<Screen> screens;
-    @ManyToOne
-    private Region region;
+    private List<Booking> bookings;
 }

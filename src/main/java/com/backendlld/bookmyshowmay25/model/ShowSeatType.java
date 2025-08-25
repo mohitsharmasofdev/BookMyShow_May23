@@ -8,18 +8,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class ShowSeat extends BaseModel {
+public class ShowSeatType extends BaseModel {
     @ManyToOne
     private Show show;
     @ManyToOne
-    private Seat seat;
-    private ShowSeatStatus status;
-
+    private SeatType seatType;
+    private int price;
 }
 
-// ShowSeat M : 1  Show
-// 1 A1 A
-// 1 A2 A
-// 1 A3 B
-// 2 A1 B
-// 2 A2 B
+// 1 Gold 200
+// 1 Silver 150
+// 1 Bronze 100
+
+// 2 Gold 200
+// 2 Silver 150
+// 2 Bronze 100

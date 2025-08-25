@@ -1,13 +1,15 @@
 package com.backendlld.bookmyshowmay25.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
-@Entity
+@Getter
+@Setter
+@Entity(name = "shows")
 public class Show extends BaseModel{
     @ManyToOne
     private Movie movie;
@@ -18,6 +20,13 @@ public class Show extends BaseModel{
     private Date time;
     @OneToMany
     private List<ShowSeat> showSeats;
+    @OneToMany
+    private List<ShowSeatType> showSeatTypes;
+    @Enumerated
+    private Language language;
+    @Enumerated
+    @ElementCollection
+    private List<Features> features;
 }
 
 // Show M : 1 Movie
