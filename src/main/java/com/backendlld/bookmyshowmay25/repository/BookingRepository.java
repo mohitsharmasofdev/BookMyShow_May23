@@ -1,12 +1,9 @@
 package com.backendlld.bookmyshowmay25.repository;
 
-import com.backendlld.bookmyshowmay25.model.Show;
+import com.backendlld.bookmyshowmay25.model.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ShowRepository extends JpaRepository<Show, Long> {
+public interface BookingRepository extends JpaRepository<Booking, Long> {
 }
-
-
-// Spring data jpa

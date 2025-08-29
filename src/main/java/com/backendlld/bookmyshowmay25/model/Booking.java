@@ -18,7 +18,7 @@ public class Booking extends BaseModel {
     private int totalAmount;
     @ManyToMany
     private List<ShowSeat> bookedSeats;
-    @OneToMany
+    @OneToMany(mappedBy = "booking")
     private List<Payment> payments;
     @Enumerated(EnumType.STRING)
     private BookingStatus status;
